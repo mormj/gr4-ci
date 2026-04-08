@@ -38,4 +38,4 @@ make build-<distro>-<profile>
 
 ## GitHub Actions
 
-The manual workflow in [`.github/workflows/build-images.yml`](/home/josh/gnuradio/gr4-ci/.github/workflows/build-images.yml) discovers the builder tree at runtime, builds each distro base in its own job, then builds each profile in its own job and pushes the resulting images to GHCR.
+The manual workflow in [`.github/workflows/build-images.yml`](/home/josh/gnuradio/gr4-ci/.github/workflows/build-images.yml) discovers the builder tree at runtime, builds each distro base in its own job, then builds each profile in its own job and pushes multi-arch images to GHCR.
