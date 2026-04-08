@@ -3,8 +3,8 @@ FROM ${BASE_IMAGE}
 
 # Toolchain profile for Ubuntu 24.04 with clang-20 and matching GCC packages.
 RUN install -d -m 0755 /etc/apt/keyrings \
-    && wget -qO /etc/apt/keyrings/llvm.gpg https://apt.llvm.org/llvm-snapshot.gpg.key \
-    && echo "deb [signed-by=/etc/apt/keyrings/llvm.gpg] http://apt.llvm.org/noble/ llvm-toolchain-noble-20 main" \
+    && wget -qO- https://apt.llvm.org/llvm-snapshot.gpg.key | gpg --dearmor -o /etc/apt/keyrings/llvm.gpg \
+    && echo "deb [signed-by=/etc/apt/keyrings/llvm.gpg] https://apt.llvm.org/noble/ llvm-toolchain-noble-20 main" \
        > /etc/apt/sources.list.d/llvm20.list
 
 RUN apt-get update -q && apt-get install --no-install-recommends -qy \
