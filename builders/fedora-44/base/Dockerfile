@@ -32,17 +32,14 @@ RUN dnf -y install \
     cppzmq-devel \
     brotli-devel \
     libcurl-devel \
-    httplib-devel \
+    cpp-httplib-devel \
     fftw-devel \
     gtest-devel \
     openssl-devel \
     tbb-devel \
-    nlohmann-json-devel \
+    json-devel \
     cli11-devel \
     rtaudio-devel \
     portaudio-devel \
-    soapysdr-devel \
-    soapysdr-hackrf \
-    soapysdr-tools \
+    SoapySDR-devel \
     && dnf clean all
-
